@@ -26,5 +26,5 @@ AddDefaultCharset UTF-8
     # Route all application requests through the public front controller.
     # This keeps the project root deployable on Apache-based hosts such as Render.
     RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^ public/index.php [L,QSA]
+    RewriteRule ^(.*)$ public/index.php/$1 [L,QSA]
 </IfModule>
